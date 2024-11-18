@@ -31,12 +31,30 @@ public class Graph {
     }
 
     public void printGraph() {
-        for (int i = 0; i < vertices; i++) {
+        for (int i = 1; i < vertices; i++) {
             System.out.print("Vertex " + i + ":");
             for (Integer edge : adjacencyList.get(i)) {
                 System.out.print(" -> " + edge);
             }
+            System.out.println();
         }
-        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Graph graph = new Graph(7);
+
+        graph.addEdge(1, 2);
+        graph.addEdge(1, 4);
+        graph.addEdge(2, 3);
+        graph.addEdge(4, 3);
+        graph.addEdge(3, 5);
+        graph.addEdge(5, 6);
+
+        graph.printGraph();
+
+        System.out.println("Graph after removing edge (1, 4)");
+        graph.removeEdge(1, 4);
+
+        graph.printGraph();
     }
 }
