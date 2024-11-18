@@ -30,5 +30,13 @@ public class Graph {
         }
     }
 
-
+    public void printGraph() {
+        for (int i = 0; i < vertices; i++) {
+            System.out.print("Vertex " + i + ":");
+            for (Integer edge : adjacencyList.get(i)) {
+                System.out.print(" -> " + edge);
+            }
+        }
+        System.out.println();
+    }
 }
