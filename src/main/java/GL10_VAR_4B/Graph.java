@@ -23,5 +23,12 @@ public class Graph {
         }
     }
 
+    public void removeEdge(int source, int destination) {
+        if (source < vertices && destination < vertices) {
+            adjacencyList.get(source).remove(Integer.valueOf(destination));
+            adjacencyList.get(destination).remove(Integer.valueOf(source));
+        }
+    }
+
 
 }
