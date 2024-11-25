@@ -30,5 +30,10 @@ public class BusStop {
 
     public void leave(String busName) {
         System.out.println(busName + " leaves " + name);
+        semaphore.release();
     }
+}
+
+    class Bus extends Thread {
+
 }
