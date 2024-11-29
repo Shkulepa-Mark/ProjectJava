@@ -1,4 +1,4 @@
-package GL6_VAR_7A;
+package clinicSimulation;
 
 public class Surgeon implements Doctor {
     @Override

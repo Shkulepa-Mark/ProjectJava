@@ -1,4 +1,4 @@
-package GL6_VAR_7A;
+package clinicSimulation;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package GL6_VAR_7A;
+package clinicSimulation;
 
 public interface Doctor {
     void treat();

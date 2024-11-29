@@ -1,4 +1,4 @@
-package GL11_VAR_5A;
+package busSimulation;
 
 public class BusStopSimulation {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package GL10_VAR_4B;
+package graphSimulation;
 
 import java.util.ArrayList;
 import java.util.List;

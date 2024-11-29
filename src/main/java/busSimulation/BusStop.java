@@ -1,4 +1,4 @@
-package GL11_VAR_5A;
+package busSimulation;
 
 import java.util.concurrent.Semaphore;
 
