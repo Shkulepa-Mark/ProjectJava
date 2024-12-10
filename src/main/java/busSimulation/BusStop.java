@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 public class BusStop {
     private final String name;
-    private final Semaphore semaphore;
+    final Semaphore semaphore;
 
     public BusStop(String name, int capacity) {
         this.name = name;
