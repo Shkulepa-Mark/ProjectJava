@@ -16,6 +16,10 @@ public class Graph {
         }
     }
 
+    public List<List<Integer>> getAdjacencyList() {
+        return adjacencyList;
+    }
+
     public void addEdge(int source, int destination) {
         if (source < vertices && destination < vertices) {
             adjacencyList.get(source).add(destination);
