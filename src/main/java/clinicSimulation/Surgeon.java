@@ -3,11 +3,11 @@ package clinicSimulation;
 public class Surgeon implements Doctor {
     @Override
     public void treat() {
-        System.out.println("Surgeon performs an operation");
+        System.out.print("Surgeon performs an operation\n");
     }
 
     @Override
     public void consult() {
-        System.out.println("Surgeon performs an consultation");
+        System.out.print("Surgeon performs an consultation\n");
     }
 }
