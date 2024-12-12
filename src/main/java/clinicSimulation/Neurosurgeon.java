@@ -1,6 +1,6 @@
 package clinicSimulation;
 
-public class Neurosurgeon implements Doctor {
+public class Neurosurgeon implements Treatable {
     @Override
     public void treat() {
         System.out.print("Neurosurgeon performs an operation\n");

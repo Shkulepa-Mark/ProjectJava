@@ -1,6 +1,6 @@
 package clinicSimulation;
 
-public interface Doctor {
+public interface Treatable {
     void treat();
 
     void consult();
