@@ -1,7 +1,7 @@
 package busSimulation;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class BusStopTest {
     @Test
@@ -9,7 +9,7 @@ public class BusStopTest {
         BusStop stop = new BusStop("Central", 1);
         boolean arrived = stop.arrive("Bus1");
 
-        Assert.assertTrue("Bus should be able to stop when there is capacity", arrived);
+        Assertions.assertTrue(arrived);
         stop.leave("Bus1");
     }
 
@@ -18,12 +18,12 @@ public class BusStopTest {
         BusStop stop = new BusStop("Central", 1);
         boolean arrived1 = stop.arrive("Bus1");
 
-        Assert.assertTrue("Bus should be able to stop when there is capacity", arrived1);
+        Assertions.assertTrue(arrived1);
         stop.leave("Bus1");
 
         boolean arrived2 = stop.arrive("Bus2");
 
-        Assert.assertTrue("Bus2 should be able to stop after Bus1 leaves", arrived2);
+        Assertions.assertTrue(arrived2);
         stop.leave("Bus2");
     }
 
@@ -35,8 +35,8 @@ public class BusStopTest {
 
         boolean result = stop.arrive("Bus1");
 
-        Assert.assertFalse("Arrive should return false when interrupted", result);
-        Assert.assertTrue("Thread should remain interrupted", Thread.currentThread().isInterrupted());
+        Assertions.assertFalse(result);
+        Assertions.assertTrue(Thread.currentThread().isInterrupted());
     }
 
     @Test
@@ -70,6 +70,6 @@ public class BusStopTest {
             bus.join();
         }
 
-        Assert.assertEquals("Semaphore should release all permits", 2, stop.semaphore.availablePermits());
+        Assertions.assertEquals(2, stop.semaphore.availablePermits());
     }
 }
