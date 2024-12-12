@@ -1,9 +1,8 @@
 package busSimulation;
 
-class Bus extends Thread {
+class Bus implements Runnable {
     private final String busName;
     private final BusStop[] route;
-
 
     Bus(String busName, BusStop[] route) {
         this.busName = busName;
@@ -31,3 +30,4 @@ class Bus extends Thread {
         System.out.println(busName + " finished the route");
     }
 }
+
